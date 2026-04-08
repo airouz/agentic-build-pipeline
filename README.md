@@ -29,7 +29,7 @@ cp -r build-pipeline/{.claude,checklists,prompts,CLAUDE.md} ./
 claude
 
 # Start pipeline
-> "습관 트래커 앱 만들고 싶어. 빌드 파이프라인 실행해줘"
+> "I want to build a habit tracker app. Run the build pipeline."
 ```
 
 > [!NOTE]
@@ -114,16 +114,6 @@ your-project/
     └── phase_summaries/
 ```
 
-## Jam Mode (Fast MVP)
-
-Skip to build with minimal design:
-
-```bash
-> "잼 모드로 간단한 타이머 앱 만들어줘"
-```
-
-Runs init → build → verify. No reviewer, checklist only.
-
 ## Tech Stack
 
 | Layer | Default | Notes |
@@ -156,7 +146,7 @@ model: haiku   # For cost savings (default)
 A: Not yet. Codex edition is planned. The prompts and checklists are reusable.
 
 **Q: Can I skip phases?**
-A: Yes. Use Jam Mode for MVP. Or manually start from any phase if you have existing docs.
+A: Yes. You can manually start from any phase if you have existing docs.
 
 **Q: How much does one full pipeline run cost?**
 A: Roughly $0.50–2.00 depending on project complexity. Reviewer (haiku) is the cheapest part.

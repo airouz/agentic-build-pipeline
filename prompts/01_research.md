@@ -1,40 +1,39 @@
-# Research Phase 프롬프트
+# Research Phase Prompt
 
-## 지시사항
+## Instructions
 
-researcher 에이전트를 사용하여 다음 프로젝트에 대한 심층 리서치를 수행하라.
+Use the researcher agent to conduct in-depth research on the following project.
 
-### 프로젝트
-{프로젝트 설명을 여기에 입력}
+### Project
+{Enter project description here}
 
-### 리서치 범위
+### Research Scope
 
-1. **시장 분석**: 시장 규모, 성장률, 주요 트렌드
-2. **경쟁사 분석**: 최소 5개 경쟁사의 기능, 가격, 장단점
-3. **사용자 페인포인트**: 실제 사용자 리뷰/게시물에서 수집. 최소 10개
-4. **페르소나**: 최소 2개 (인구통계, 목표, 불안, 현재 해결책)
-5. **감정 여정**: A→B 과정의 감정 변화 맵핑
-6. **사용자 컨텍스트**: 언제/어디서/어떤 상황에서 사용하는가
-7. **Lean Canvas**: 핵심 가설
-8. **JTBD**: 사용자가 고용하고 싶은 "일"
-9. **기회**: 발견한 기회 3~5개
+1. **Market Analysis**: Market size, growth rate, key trends
+2. **Competitive Analysis**: At least 5 competitors — features, pricing, strengths, weaknesses
+3. **User Pain Points**: Collected from real user reviews/posts. Minimum 10
+4. **Personas**: At least 2 (demographics, goals, frustrations, current solutions)
+5. **Emotional Journey**: Emotional change mapping from A to B
+6. **User Context**: When, where, and in what situations users would use this
+7. **Lean Canvas**: Core hypotheses
+8. **JTBD**: Jobs users want to hire a solution for
+9. **Opportunities**: 3–5 opportunities discovered
 
-### 디자이너 관점 필수 항목
-- 사용자가 무엇을 느끼는가 (감정)
-- 어떤 상황에서 쓰는가 (맥락)
-- 왜 기존 해결책이 불충분한가 (불만)
-- 어떤 경험을 원하는가 (기대)
+### Designer Perspective (Required)
+- What do users feel? (emotions)
+- In what situations do they use this? (context)
+- Why are existing solutions insufficient? (frustrations)
+- What experience do they want? (expectations)
 
-### 검색 전략
-- web_search 최소 5회 실행
-- web_extract로 상위 결과 상세 분석
-- Reddit/Hacker News에서 실제 사용자 의견 수집
-- 경쟁사 공식 페이지에서 가격/기능 확인
-- 앱스토어 리뷰에서 페인포인트 추출
+### Search Strategy
+- Run web_search at least 5 times
+- Use web_extract for detailed analysis of top results
+- Collect real user opinions from Reddit, Hacker News
+- Verify competitor pricing from official pages
+- Extract pain points from app store reviews
 
-### 산출물 저장
-`.ralph/outputs/01_research.md`
+### Output
+Save to `.ralph/outputs/01_research.md`
 
-### 출력 형식
-researcher 에이전트의 산출물 구조를 따를 것.
-모든 주장에 출처를 명시할 것.
+Follow the researcher agent deliverable structure.
+Cite sources for all claims.

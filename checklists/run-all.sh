@@ -1,9 +1,9 @@
 #!/bin/bash
-# 전체 파이프라인 체크리스트 실행
-# 사용법: bash checklists/run-all.sh
+# Run all pipeline checklists
+# Usage: bash checklists/run-all.sh
 
 echo "=========================================="
-echo "  Build Pipeline — 전체 체크리스트"
+echo "  Build Pipeline — All Checklists"
 echo "=========================================="
 echo ""
 
@@ -47,7 +47,7 @@ fi
 echo ""
 
 echo "=========================================="
-echo "  전체 결과: $TOTAL_PASS PASS / $TOTAL_FAIL FAIL"
+echo "  Total: $TOTAL_PASS PASS / $TOTAL_FAIL FAIL"
 echo "=========================================="
 
 exit $TOTAL_FAIL

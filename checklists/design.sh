@@ -1,6 +1,6 @@
 #!/bin/bash
-# Design Phase 기계적 체크리스트
-# 사용법: bash checklists/design.sh
+# Design Phase Mechanical Checklist
+# Usage: bash checklists/design.sh
 
 FILE=".ralph/outputs/03_design.md"
 TOKENS=".ralph/design/tokens.json"
@@ -24,36 +24,36 @@ check() {
 echo "=== Design Phase Checklist ==="
 echo ""
 
-check "산출물 파일 존재" "test -f $FILE"
+check "Deliverable file exists" "test -f $FILE"
 
-# 필수 섹션 (Overview/Design Concept 등 다양한 헤더 허용)
-check "Design Concept 또는 Overview" "grep -qi '## Design Concept\\|## Overview\\|## 디자인 컨셉' $FILE"
-check "Typography 섹션" "grep -qi '## Typography\\|## 타이포그래피' $FILE"
-check "Color System 섹션" "grep -qi '## Color\\|## 컬러\\|## Colour' $FILE"
-check "Component Inventory 섹션" "grep -qi '## Component\\|## 컴포넌트' $FILE"
-check "Page Specifications 섹션" "grep -qi '## Page\\|## 페이지' $FILE"
-check "Anti-AI 체크리스트" "grep -qi 'anti.ai\\|Anti-AI\\|anti_ai' $FILE"
+# Required sections (allow various header names)
+check "Design Concept or Overview" "grep -qi '## Design Concept\\|## Overview' $FILE"
+check "Typography section" "grep -qi '## Typography' $FILE"
+check "Color System section" "grep -qi '## Color\\|## Colour' $FILE"
+check "Component Inventory section" "grep -qi '## Component' $FILE"
+check "Page Specifications section" "grep -qi '## Page' $FILE"
+check "Anti-AI checklist" "grep -qi 'anti.ai\\|Anti-AI\\|anti_ai' $FILE"
 
-# 디자이너 관점
-check "Design Reference / 레퍼런스" "grep -qi 'reference\\|레퍼런스\\|참조' $FILE"
-check "Onboarding Storyboard" "grep -qi 'onboarding\\|온보딩\\|storyboard\\|스토리보드' $FILE"
-check "Micro-interactions" "grep -qi 'micro.interaction\\|인터랙션\\|animation\\|애니메이션' $FILE"
-check "Information Hierarchy" "grep -qi 'hierarchy\\|계층\\|우선순위' $FILE"
+# Designer perspective
+check "Design Reference analysis" "grep -qi 'reference' $FILE"
+check "Onboarding Storyboard" "grep -qi 'onboarding\\|storyboard' $FILE"
+check "Micro-interactions" "grep -qi 'micro.interaction\\|animation' $FILE"
+check "Information Hierarchy" "grep -qi 'hierarchy\\|priority' $FILE"
 
 # 4-state
-check "Empty state 정의" "grep -qi 'empty\\|빈 상태\\|empty state' $FILE"
-check "Loading state 정의" "grep -qi 'loading\\|로딩' $FILE"
-check "Error state 정의" "grep -qi 'error\\|에러\\|오류' $FILE"
+check "Empty state defined" "grep -qi 'empty\\|empty state' $FILE"
+check "Loading state defined" "grep -qi 'loading' $FILE"
+check "Error state defined" "grep -qi 'error' $FILE"
 
-# 토큰
-check "tokens.json 존재" "test -f $TOKENS"
+# Tokens
+check "tokens.json exists" "test -f $TOKENS"
 
-# 컬러 심리학
-check "컬러 심리학 근거" "grep -qi '심리\\|psychology\\|감성\\|분위기' $FILE"
+# Color psychology
+check "Color psychology reasoning" "grep -qi 'psychology\\|emotion\\|mood\\|feeling' $FILE"
 
 echo ""
-echo "=== 결과: $PASS PASS / $FAIL FAIL ==="
+echo "=== Result: $PASS PASS / $FAIL FAIL ==="
 if [ $FAIL -gt 0 ]; then
-    echo -e "\n실패 항목:$ERRORS"
+    echo -e "\nFailed items:$ERRORS"
 fi
 exit $FAIL

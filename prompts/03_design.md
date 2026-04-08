@@ -1,59 +1,58 @@
-# Design Phase 프롬프트
+# Design Phase Prompt
 
-## 지시사항
+## Instructions
 
-writer 에이전트를 사용하여 PRD를 바탕으로 Design Spec을 작성하라.
+Use the writer agent to create a Design Spec based on the PRD.
 
-### 참조 파일
-- PRD 요약: `.ralph/phase_summaries/02_prd_summary.md`
-- PRD 원문: `.ralph/outputs/02_prd.md` (필요시)
-- Research 요약: `.ralph/phase_summaries/01_research_summary.md`
+### Reference Files
+- PRD summary: `.ralph/phase_summaries/02_prd_summary.md`
+- PRD full text: `.ralph/outputs/02_prd.md` (if needed)
+- Research summary: `.ralph/phase_summaries/01_research_summary.md`
 
-### Design Spec 필수 섹션
+### Required Design Spec Sections
 
-1. **Design Concept** — 핵심 비주얼 컨셉 1문장 + 레퍼런스 앱 2~3개
-2. **Design Reference Analysis** — 각 레퍼런스에서 차용할 점/차용하지 않을 점
-3. **Typography** — 폰트 선택 + 선택 근거 (타깃 유저 기반)
-4. **Color System** — Primary/Secondary/Accent/Background + 컬러 심리학 근거
-5. **Component Inventory** — Atoms/Molecules/Organisms 계층 분류
-6. **Page Specifications** — 각 페이지 4-state (Empty/Loading/Normal/Error)
-7. **Information Hierarchy** — 각 페이지 시각적 우선순위
-8. **Onboarding Storyboard** — 화면 전환 플로우 + UX 카피
-9. **Micro-interactions** — hover/focus/전환/피드백 애니메이션
-10. **Design Tokens** — tokens.json에 CSS 변수 정의
-11. **Anti-AI Design Checklist** — 10항목 모두 체크
+1. **Design Concept** — 1-sentence core visual concept + 2–3 reference apps
+2. **Design Reference Analysis** — What to adopt / what to avoid per reference
+3. **Typography** — Font selection + reasoning (based on target user demographics)
+4. **Color System** — Primary/Secondary/Accent/Background + color psychology reasoning
+5. **Component Inventory** — Atoms/Molecules/Organisms layer classification
+6. **Page Specifications** — 4-state per page (Empty/Loading/Normal/Error)
+7. **Information Hierarchy** — Visual priority per page
+8. **Onboarding Storyboard** — Screen transition flow + UX copy
+9. **Micro-interactions** — hover/focus/transition/feedback animations
+10. **Design Tokens** — CSS variables defined in tokens.json
+11. **Anti-AI Design Checklist** — All 10 items checked
 
-### Anti-AI Design Checklist (반드시 10/10)
-- [ ] 그라데이션 배경 사용 안 함
-- [ ] 둥근 카드+그림자 과용 안 함
-- [ ] 과도한 여백 없음
-- [ ] 보라색 텍스트 없음
-- [ ] "AI-powered" 문구 없음
-- [ ] 로봇/스파클 이모지 없음
-- [ ] 일러스트레이션 과용 안 함
-- [ ] 과도한 애니메이션 없음
-- [ ] 제네릭 아이콘 세트 사용 안 함
-- [ ] 실제 콘텐츠 사용 (placeholder 없음)
+### Anti-AI Design Checklist (must pass 10/10)
+- [ ] No gradient backgrounds
+- [ ] No excessive rounded cards + shadows
+- [ ] No excessive whitespace
+- [ ] No purple text
+- [ ] No "AI-powered" wording
+- [ ] No robot/sparkle emojis
+- [ ] No illustration overuse
+- [ ] No excessive animations
+- [ ] No generic icon sets
+- [ ] No placeholders — use real content
 
-### 일관성 규칙
-- 페이지 수는 PRD의 User Stories와 일치
-- 컴포넌트는 PRD의 기능 목록을 모두 커버
-- UX 카피는 PRD의 카피라이팅 가이드를 따름
-- 페르소나는 Research와 동일
+### Consistency Rules
+- Page count must match PRD User Stories
+- Components must cover all PRD features
+- UX copy must follow PRD copywriting guide
+- Personas must match Research
 
-### 레퍼런스 앱 추천
-디자인 분석 시 다음 앱 중 관련 있는 것을 참조:
-- Finch (습관 트래커)
-- Everyday (타이머)
-- Streaks (루틴)
-- Things 3 (할일)
-- Notion (노트)
-- Spotify (음악)
+### Reference Apps (suggested)
+- Finch (habit tracker)
+- Everyday (timer)
+- Streaks (routines)
+- Things 3 (todo)
+- Notion (notes)
+- Spotify (music)
 
-### 산출물 저장
+### Output
 - Design Spec: `.ralph/outputs/03_design.md`
 - Design Tokens: `.ralph/design/tokens.json`
 
 ### Tech Stack
 - Next.js + TypeScript + shadcn/ui v4 (base-ui) + Tailwind CSS
-- shadcn v4에서 **asChild prop 사용 불가**
+- asChild prop is **not available** in shadcn v4
